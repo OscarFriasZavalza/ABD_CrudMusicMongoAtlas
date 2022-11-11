@@ -65,7 +65,7 @@ router.put("/alumnos/:curp", (req, res) => {
     const { curp } = req.params;
     const { nombre, fecha_nac, telefonos,instrumento,materias_cursadas} = req.body;
 
-    client.set('PUT a alumno'+fecha_actual(),'SE HIZO PUT A ALUMNOS');
+    client.set('PUT a alumno '+fecha_actual(),'SE HIZO PUT A ALUMNOS');
 
 
     Alumnos
@@ -78,7 +78,7 @@ router.put("/alumnos/:curp", (req, res) => {
  router.post("/aulas", (req, res) => {
   const aulas = Aulas(req.body);
 
-  client.set('POST a AULAS'+fecha_actual(),'SE HIZO POST A AULAS');
+  client.set('POST a AULAS '+fecha_actual(),'SE HIZO POST A AULAS');
 
   aulas
     .save()
@@ -89,7 +89,7 @@ router.put("/alumnos/:curp", (req, res) => {
 //*mostrar todas las aulas
 router.get("/aulas", (req, res) => {
 
-  client.set('GET a AULAS'+fecha_actual(),'SE HIZO GET A AULAS');
+  client.set('GET a AULAS '+fecha_actual(),'SE HIZO GET A AULAS');
 
   Aulas
     .find()
@@ -100,7 +100,7 @@ router.get("/aulas", (req, res) => {
 //* mostrar aulas por codigo
 router.get("/aulas/:codigo", (req, res) => {
 
-  client.set('GET A UNA AULA'+fecha_actual(),'SE HIZO GET A AULA');
+  client.set('GET A UNA AULA '+fecha_actual(),'SE HIZO GET A AULA');
 
   const  codigo  = req.params;
   Aulas
@@ -112,7 +112,7 @@ router.get("/aulas/:codigo", (req, res) => {
 //* Actualizar a aulas
 router.put("/aulas/:codigo", (req, res) => {
 
-  client.set('PUT a AULAS'+fecha_actual(),'SE HIZO PUT A AULAS');
+  client.set('PUT a AULAS '+fecha_actual(),'SE HIZO PUT A AULAS');
 
   const { codigo } = req.params;
   const { nombre, num_max} = req.body;
@@ -126,7 +126,7 @@ router.put("/aulas/:codigo", (req, res) => {
  //TODO CRUD PARA DOCENTES/////////////////////////////////////////////////////////////////
  router.post("/docentes", (req, res) => {
 
-  client.set('POST a DOCENTES'+fecha_actual(),'SE HIZO POST A DOCENTES');
+  client.set('POST a DOCENTES '+fecha_actual(),'SE HIZO POST A DOCENTES');
 
   const docentes = Docentes(req.body);
   docentes
@@ -138,7 +138,7 @@ router.put("/aulas/:codigo", (req, res) => {
 //*mostrar todos los docentes
 router.get("/docentes", (req, res) => {
     
-  client.set('GET a DOCENTES'+fecha_actual(),'SE HIZO GET A DOCENTES');
+  client.set('GET a DOCENTES '+fecha_actual(),'SE HIZO GET A DOCENTES');
     
   Docentes
     .find()
@@ -161,7 +161,7 @@ router.get("/docentes/:curp", (req, res) => {
 //* Actualizar a Docente
 router.put("/docentes/:curp", (req, res) => {
 
-  client.set('PUT a DOCENTE'+fecha_actual(),'SE HIZO PUT A DOCENTE');
+  client.set('PUT a DOCENTE '+fecha_actual(),'SE HIZO PUT A DOCENTE');
 
 
   const { curp } = req.params;
@@ -176,7 +176,7 @@ router.put("/docentes/:curp", (req, res) => {
  //TODO CRUD PARA INSTRUMENTOS/////////////////////////////////////////////////////////////////
  router.post("/instrumentos", (req, res) => {
 
-  client.set('POST a INSTRUMENTOS'+fecha_actual(),'SE HIZO POST A INSTRUMENTOS');
+  client.set('POST a INSTRUMENTOS '+fecha_actual(),'SE HIZO POST A INSTRUMENTOS');
 
   const instrumento = Instrumentos(req.body);
   instrumento
@@ -188,7 +188,7 @@ router.put("/docentes/:curp", (req, res) => {
 //*mostrar todos los instrumentos
 router.get("/instrumentos", (req, res) => {
 
-  client.set('GET a INSTRUMENTOS'+fecha_actual(),'SE HIZO GET A INSTRUMENTOS');
+  client.set('GET a INSTRUMENTOS '+fecha_actual(),'SE HIZO GET A INSTRUMENTOS');
 
   Instrumentos
     .find()
@@ -199,7 +199,7 @@ router.get("/instrumentos", (req, res) => {
 //* mostrar todos los instrumentos por id
 router.get("/instrumentos/:id", (req, res) => {
     
-  client.set('GET a INSTRUMENTO EN ESPECIFICO'+fecha_actual(),'SE HIZO GET A INSTRUMENTOS');
+  client.set('GET a INSTRUMENTO EN ESPECIFICO '+fecha_actual(),'SE HIZO GET A INSTRUMENTOS');
 
   const  id  = req.params;
   Instrumentos
